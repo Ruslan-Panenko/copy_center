@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Копицентр{% endblock %}</title>
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/orders/">Заказы</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+        </ul>
+        <a href="/admin/" style="margin-right: 120px;">Admin</a>
+    </nav>
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    <p>&copy; 2023 Копицентр</p>
+</footer>
+{% block scripts %}
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>

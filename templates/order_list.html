@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Заказы</h1>
+    {% for service in services %}
+        <hr>
+        <ul>
+            <li>{{ service.customer }} </li>
+            <li>{{ service.employee }} </li>
+            <li>{{ service.service }} </li>
+            <li>{{ service.date }} </li>
+        </ul>
+    {% empty %}
+        <li>No orders available.</li>
+    {% endfor %}
+{% endblock %}
