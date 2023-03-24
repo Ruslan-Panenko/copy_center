@@ -1,1 +1,1 @@
-web: gunicorn polygonal_paper.wsgi --log-file -
+web: gunicorn copy_center.wsgi --log-file -
